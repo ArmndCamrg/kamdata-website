@@ -33,32 +33,18 @@ const Home: React.FC = () => {
 
   const servicios = [
     {
-      titulo: 'Conferencias',
+      titulo: 'Conferencias y Talleres',
       descripcion: 'Despierta tu Genio Digital',
-      detalle: 'Inspira, conecta, transforma',
-      link: '/servicios/conferencias',
+      detalle: 'Inspira, conecta, transforma. Formación práctica y aplicable',
+      link: '/servicios',
       icono: '🎤'
     },
     {
-      titulo: 'Talleres',
-      descripcion: 'Aprende haciendo. Avanza con claridad',
-      detalle: 'Formación práctica y aplicable',
-      link: '/servicios/talleres',
-      icono: '🛠️'
-    },
-    {
-      titulo: 'Mentoría Grupal',
-      descripcion: 'Programa de 7 semanas',
-      detalle: 'Comunidad, estructura, resultados',
-      link: '/servicios/mentoria-grupal',
+      titulo: 'Mentorías',
+      descripcion: 'Acompañamiento personalizado',
+      detalle: 'Grupal e individual. Flexible, confidencial y profundo',
+      link: '/servicios',
       icono: '👥'
-    },
-    {
-      titulo: 'Mentoría Individual',
-      descripcion: 'Acompañamiento 1:1',
-      detalle: 'Flexible, confidencial y profundo',
-      link: '/servicios/mentoria-individual',
-      icono: '🎯'
     },
     {
       titulo: 'Nexo Estratégico',
@@ -133,18 +119,33 @@ const Home: React.FC = () => {
             <div className="relative">
               <div className="relative z-10">
                 <div className="w-80 h-80 mx-auto relative">
-                  {/* Brújula animada mejorada */}
-                  <div className="absolute inset-0 border-4 border-kamdata-primary rounded-full animate-spin-slow shadow-lg">
-                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-8 border-l-transparent border-r-transparent border-b-kamdata-primary"></div>
+                  {/* Círculo principal con metodología DANCE */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full shadow-2xl">
+                    {/* Círculo interior azul con texto DANCE */}
+                    <div className="absolute inset-8 bg-kamdata-accent rounded-full flex flex-col items-center justify-center text-white shadow-xl">
+                      <div className="text-4xl font-bold font-montserrat tracking-wider">DANCE</div>
+                      <div className="text-lg font-medium mt-2">Metodología</div>
+                    </div>
+                    
+                    {/* 4 puntos giratorios en el borde del círculo */}
+                    <div className="absolute inset-0 animate-spin-slow">
+                      {/* Punto amarillo - arriba */}
+                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-kamdata-primary rounded-full shadow-lg"></div>
+                      {/* Punto rojo - derecha */}
+                      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 w-6 h-6 bg-kamdata-secondary rounded-full shadow-lg"></div>
+                      {/* Punto rojo - abajo */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-kamdata-secondary rounded-full shadow-lg"></div>
+                      {/* Punto amarillo - izquierda */}
+                      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 w-6 h-6 bg-kamdata-primary rounded-full shadow-lg"></div>
+                    </div>
                   </div>
-                  <div className="absolute inset-4 bg-white rounded-full shadow-xl flex items-center justify-center animate-pulse-glow">
-                    <span className="text-5xl">🧭</span>
-                  </div>
-                  {/* Puntos conectores animados mejorados */}
-                  <div className="absolute -top-4 -right-4 w-4 h-4 bg-kamdata-accent rounded-full animate-pulse shadow-lg"></div>
-                  <div className="absolute -bottom-4 -left-4 w-4 h-4 bg-kamdata-secondary rounded-full animate-pulse shadow-lg" style={{animationDelay: '0.5s'}}></div>
-                  <div className="absolute top-1/2 -right-8 w-4 h-4 bg-kamdata-primary rounded-full animate-pulse shadow-lg" style={{animationDelay: '1s'}}></div>
-                  <div className="absolute top-1/4 -left-6 w-3 h-3 bg-kamdata-accent rounded-full animate-pulse shadow-lg" style={{animationDelay: '1.5s'}}></div>
+                  
+                  {/* Puntos externos flotantes */}
+                  <div className="absolute -top-4 -left-4 w-4 h-4 bg-kamdata-primary rounded-full animate-float shadow-lg"></div>
+                  <div className="absolute -top-8 right-8 w-3 h-3 bg-kamdata-secondary rounded-full animate-float shadow-lg" style={{animationDelay: '0.5s'}}></div>
+                  <div className="absolute top-1/3 -right-8 w-4 h-4 bg-kamdata-accent rounded-full animate-float shadow-lg" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute bottom-8 -right-4 w-3 h-3 bg-kamdata-primary rounded-full animate-float shadow-lg" style={{animationDelay: '1.5s'}}></div>
+                  <div className="absolute -bottom-6 left-8 w-4 h-4 bg-kamdata-secondary rounded-full animate-float shadow-lg" style={{animationDelay: '2s'}}></div>
                 </div>
               </div>
               <div className="absolute inset-0 gradient-kamdata rounded-full blur-3xl opacity-20 animate-pulse"></div>
@@ -188,7 +189,7 @@ const Home: React.FC = () => {
             </p>
             <div className="w-24 h-1 bg-kamdata-primary mx-auto rounded-full"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {servicios.map((servicio, index) => (
               <Link
                 key={index}
@@ -198,8 +199,8 @@ const Home: React.FC = () => {
                 {/* Elemento decorativo */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-kamdata-primary/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
                 
-                <div className="relative z-10">
-                  <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="relative z-10 text-center">
+                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float inline-block" style={{animationDelay: `${index * 0.1}s`}}>
                     {servicio.icono}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 font-montserrat">{servicio.titulo}</h3>
@@ -218,55 +219,88 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Teaser Método DANCE */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                El Método <span className="text-kamdata-primary">DANCE</span>
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Nuestro framework exclusivo de 5 pasos que transforma la manera en que 
-                tu empresa gestiona y utiliza sus datos para tomar decisiones estratégicas.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-kamdata-primary text-white rounded-full flex items-center justify-center font-bold mr-3">D</div>
-                  <span className="font-semibold">Diagnostica</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-kamdata-primary text-white rounded-full flex items-center justify-center font-bold mr-3">A</div>
-                  <span className="font-semibold">Alinea</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-kamdata-primary text-white rounded-full flex items-center justify-center font-bold mr-3">N</div>
-                  <span className="font-semibold">Navega</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-kamdata-primary text-white rounded-full flex items-center justify-center font-bold mr-3">C</div>
-                  <span className="font-semibold">Construye</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-kamdata-primary text-white rounded-full flex items-center justify-center font-bold mr-3">E</div>
-                  <span className="font-semibold">Ejecuta</span>
-                </div>
+      {/* Metodología DANCE */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Título principal */}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-montserrat">
+            El Método <span className="text-kamdata-primary">DANCE</span>
+          </h2>
+          
+          {/* Descripción */}
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Nuestro framework exclusivo de 5 pasos que transforma la manera en que 
+            tu empresa gestiona y utiliza sus datos para tomar decisiones estratégicas.
+          </p>
+
+          {/* Lista de pasos DANCE */}
+          <div className="space-y-6 mb-12 max-w-2xl mx-auto">
+            {/* D - Diagnostica */}
+            <div className="flex items-center text-left">
+              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
+                D
               </div>
-              <Link
-                to="/metodo-dance"
-                className="inline-flex items-center px-6 py-3 bg-kamdata-accent text-white font-semibold rounded-lg hover:bg-kamdata-accent/90 transition-colors"
-              >
-                Descubre el Método Completo
-              </Link>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Diagnostica</h3>
+                <p className="text-gray-600">Evaluamos el estado actual de tus datos y procesos de decisión</p>
+              </div>
             </div>
-            <div className="relative">
-              <img 
-                src="/images/metodo-dance-preview.jpg" 
-                alt="Método DANCE" 
-                className="rounded-lg shadow-lg"
-              />
+
+            {/* A - Alinea */}
+            <div className="flex items-center text-left">
+              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
+                A
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Alinea</h3>
+                <p className="text-gray-600">Sincronizamos objetivos de negocio con capacidades de datos</p>
+              </div>
+            </div>
+
+            {/* N - Navega */}
+            <div className="flex items-center text-left">
+              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
+                N
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Navega</h3>
+                <p className="text-gray-600">Exploramos y analizamos datos para descubrir insights valiosos</p>
+              </div>
+            </div>
+
+            {/* C - Construye */}
+            <div className="flex items-center text-left">
+              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
+                C
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Construye</h3>
+                <p className="text-gray-600">Desarrollamos soluciones y estrategias basadas en datos</p>
+              </div>
+            </div>
+
+            {/* E - Ejecuta */}
+            <div className="flex items-center text-left">
+              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
+                E
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-1">Ejecuta</h3>
+                <p className="text-gray-600">Implementamos y monitoreamos las soluciones para resultados sostenibles</p>
+              </div>
             </div>
           </div>
+
+          {/* Botón CTA */}
+          <Link
+            to="/metodo-dance"
+            className="inline-flex items-center px-8 py-4 bg-kamdata-accent text-white font-bold rounded-xl hover:bg-kamdata-accent/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+          >
+            Descubre el Método Completo
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
       </section>
 

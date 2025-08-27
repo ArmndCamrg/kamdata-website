@@ -33,11 +33,11 @@ const Header: React.FC = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img 
-                className="h-10 w-auto" 
+                className="logo-kamdata-large" 
                 src="/logo-kamdata.png" 
                 alt="Kamdata" 
               />
-              <span className="ml-3 text-xl font-bold text-gray-900 font-montserrat">Kamdata</span>
+              <span className="ml-4 text-xl font-bold text-gray-900 font-montserrat">Kamdata</span>
             </Link>
           </div>
 

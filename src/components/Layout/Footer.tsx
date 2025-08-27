@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               />
               <span className="ml-3 text-xl font-bold font-montserrat">Kamdata</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
+            <p className="text-gray-200 mb-4 max-w-md">
               Kamdata es una empresa de mentoría que habilita a profesionales y líderes de PyMEs 
               para convertir sus datos en decisiones claras, sostenibles y estratégicas.
             </p>
@@ -30,27 +30,27 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/servicios" className="text-gray-300 hover:text-kamdata-primary transition-colors">
+                <Link to="/servicios" className="text-gray-200 hover:text-kamdata-primary transition-colors">
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link to="/metodo-dance" className="text-gray-300 hover:text-kamdata-primary transition-colors">
+                <Link to="/metodo-dance" className="text-gray-200 hover:text-kamdata-primary transition-colors">
                   Método DANCE
                 </Link>
               </li>
               <li>
-                <Link to="/sobre-kamdata" className="text-gray-300 hover:text-kamdata-primary transition-colors">
+                <Link to="/sobre-kamdata" className="text-gray-200 hover:text-kamdata-primary transition-colors">
                   Sobre Kamdata
                 </Link>
               </li>
               <li>
-                <Link to="/historias-kamdata" className="text-gray-300 hover:text-kamdata-primary transition-colors">
+                <Link to="/historias-kamdata" className="text-gray-200 hover:text-kamdata-primary transition-colors">
                   Historias de Éxito
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-kamdata-primary transition-colors">
+                <Link to="/blog" className="text-gray-200 hover:text-kamdata-primary transition-colors">
                   Blog/Recursos
                 </Link>
               </li>
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <div className="space-y-2">
-              <p className="text-gray-300">
+              <p className="text-gray-200">
                 <span className="font-medium">Email:</span><br />
                 <a 
                   href="mailto:informes@kamdata.com.mx" 
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                   informes@kamdata.com.mx
                 </a>
               </p>
-              <p className="text-gray-300">
+              <p className="text-gray-200">
                 <span className="font-medium">Teléfono:</span><br />
                 <a 
                   href="tel:+525661610375" 
@@ -99,16 +99,16 @@ const Footer: React.FC = () => {
         {/* Aliados */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <h3 className="text-lg font-semibold mb-4 text-center">Nuestros Aliados</h3>
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <span className="text-gray-400">ProEmpleo</span>
-            <span className="text-gray-400">Instituto de Innovación</span>
-            <span className="text-gray-400">DAMA México</span>
+          <div className="flex justify-center items-center space-x-8">
+            <span className="text-gray-300">ProEmpleo</span>
+            <span className="text-gray-300">Instituto de Innovación</span>
+            <span className="text-gray-300">DAMA México</span>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-300">
             © {new Date().getFullYear()} Kamdata. Todos los derechos reservados.
           </p>
         </div>
