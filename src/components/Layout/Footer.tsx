@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
           {/* Enlaces rápidos */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-semibold mb-4 text-kamdata-primary">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/servicios" className="text-gray-200 hover:text-kamdata-primary transition-colors">
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
 
           {/* Contacto */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
+            <h3 className="text-lg font-semibold mb-4 text-kamdata-primary">Contacto</h3>
             <div className="space-y-2">
               <p className="text-gray-200">
                 <span className="font-medium">Email:</span><br />
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
 
         {/* Aliados */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <h3 className="text-lg font-semibold mb-4 text-center">Nuestros Aliados</h3>
+          <h3 className="text-lg font-semibold mb-4 text-center text-kamdata-primary">Nuestros Aliados</h3>
           <div className="flex justify-center items-center space-x-8">
             <span className="text-gray-300">ProEmpleo</span>
             <span className="text-gray-300">Instituto de Innovación</span>
