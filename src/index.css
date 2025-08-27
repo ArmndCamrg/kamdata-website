@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700&display=swap');
+
+/* Variables CSS para colores Kamdata */
+:root {
+  --kamdata-primary: #E8AC41;
+  --kamdata-secondary: #FC4C4E;
+  --kamdata-accent: #0492C2;
+  --kamdata-primary-light: #fef9ec;
+  --kamdata-primary-dark: #ae6c17;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1f2937;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+}
+
+@layer components {
+  /* Estilos para botones principales */
+  .btn-primary {
+    @apply bg-kamdata-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-primary-600 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-kamdata-secondary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-secondary-600 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-accent {
+    @apply bg-kamdata-accent text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-accent-600 hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  /* Estilos para cards */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Gradientes personalizados */
+  .gradient-kamdata {
+    background: linear-gradient(135deg, var(--kamdata-primary) 0%, var(--kamdata-accent) 100%);
+  }
+
+  .gradient-kamdata-soft {
+    background: linear-gradient(135deg, var(--kamdata-primary-light) 0%, rgba(4, 146, 194, 0.1) 100%);
+  }
+
+  /* Estilos para el logo */
+  .logo-kamdata {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+}
+
+@layer utilities {
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  /* Animaciones mejoradas */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 5px rgba(232, 172, 65, 0.5);
+    }
+    50% { 
+      box-shadow: 0 0 20px rgba(232, 172, 65, 0.8);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Utilidades de colores Kamdata */
+  .text-kamdata-primary {
+    color: var(--kamdata-primary);
+  }
+
+  .text-kamdata-secondary {
+    color: var(--kamdata-secondary);
+  }
+
+  .text-kamdata-accent {
+    color: var(--kamdata-accent);
+  }
+
+  .bg-kamdata-primary {
+    background-color: var(--kamdata-primary);
+  }
+
+  .bg-kamdata-secondary {
+    background-color: var(--kamdata-secondary);
+  }
+
+  .bg-kamdata-accent {
+    background-color: var(--kamdata-accent);
+  }
+
+  .border-kamdata-primary {
+    border-color: var(--kamdata-primary);
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--kamdata-primary);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--kamdata-primary-dark);
+  }
+}
