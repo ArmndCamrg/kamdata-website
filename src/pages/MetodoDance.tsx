@@ -158,15 +158,27 @@ const MetodoDance: React.FC = () => {
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Nuestra metodología probada de 5 fases para transformaciones digitales exitosas y sostenibles
             </p>
-            <div className="flex justify-center space-x-4 mb-8">
-              {phases.map((phase, index) => (
-                <div key={index} className="text-center">
-                  <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${phase.color} flex items-center justify-center text-2xl font-bold mb-2`}>
-                    {phase.letter}
+            <div className="flex justify-center items-end space-x-2 sm:space-x-4 mb-8 max-w-2xl mx-auto">
+              {phases.map((phase, index) => {
+                // Definir la altura de cada elemento para crear el arco
+                let marginBottom = '';
+                if (index === 0 || index === 4) { // D y E en la base
+                  marginBottom = 'mb-0';
+                } else if (index === 1 || index === 3) { // A y C en segundo nivel
+                  marginBottom = 'mb-8';
+                } else if (index === 2) { // N en el centro superior
+                  marginBottom = 'mb-16';
+                }
+                
+                return (
+                  <div key={index} className={`text-center ${marginBottom}`}>
+                    <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${phase.color} flex items-center justify-center text-xl sm:text-2xl font-bold mb-2 shadow-lg`}>
+                      {phase.letter}
+                    </div>
+                    <div className="text-xs sm:text-sm font-semibold text-white">{phase.name}</div>
                   </div>
-                  <div className="text-sm font-semibold">{phase.name}</div>
-                </div>
-              ))}
+                );
+              })}
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 

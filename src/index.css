@@ -81,7 +81,13 @@
   }
   
   .animate-spin-slow {
-    animation: spin 3s linear infinite;
+    animation: spin 8s linear infinite;
+  }
+
+  /* Logo Kamdata aumentado */
+  .logo-kamdata-large {
+    height: 2.5rem !important;
+    width: auto;
   }
 
   /* Animaciones mejoradas */
