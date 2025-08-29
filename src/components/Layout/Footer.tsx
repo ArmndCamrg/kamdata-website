@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               para convertir sus datos en decisiones claras, sostenibles y estratégicas.
             </p>
             <p className="text-kamdata-primary font-semibold">
-              "No navegamos por ti. Te damos la brújula y te enseñamos cómo."
+              "Convierte la gestión de datos en un hábito estratégico"
             </p>
           </div>
 
@@ -96,15 +96,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Aliados */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <h3 className="text-lg font-semibold mb-4 text-center text-kamdata-primary">Nuestros Aliados</h3>
-          <div className="flex justify-center items-center space-x-8">
-            <span className="text-gray-300">ProEmpleo</span>
-            <span className="text-gray-300">Instituto de Innovación</span>
-            <span className="text-gray-300">DAMA México</span>
-          </div>
-        </div>
+
 
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
