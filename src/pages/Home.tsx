@@ -90,8 +90,7 @@ const Home: React.FC = () => {
                 <button
                   className="btn-primary text-center shadow-lg hover:shadow-xl"
                   onClick={() => {
-                    // TODO: Agregar URL del test de mentalidad digital
-                    alert('URL del test de mentalidad pendiente');
+                    window.open('https://www.kamdata.click', '_blank');
                   }}
                 >
                   Comienza aquí
@@ -423,8 +422,7 @@ const Home: React.FC = () => {
             <button
               className="inline-flex items-center px-10 py-4 bg-white text-kamdata-primary font-bold rounded-xl hover:bg-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl text-lg"
               onClick={() => {
-                // TODO: Agregar URL del test de mentalidad digital
-                alert('URL del test de mentalidad pendiente');
+                window.open('https://www.kamdata.click', '_blank');
               }}
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
