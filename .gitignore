@@ -40,7 +40,7 @@ coverage
 node_modules/
 jspm_packages/
 
-# Optional npm cache directory
+# Optional npm cache
 .npm
 
 # Optional eslint cache
@@ -78,7 +78,6 @@ dist
 
 # Gatsby files
 .cache/
-public
 
 # Storybook build outputs
 .out
