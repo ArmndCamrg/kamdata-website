@@ -1,0 +1,20 @@
+steps:
+  # Paso 1: Instalar las dependencias de Node.js
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+
+  # Paso 2: Construir la aplicación de React para producción
+  # Esto crea la carpeta 'build' con los archivos estáticos.
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+
+  # Paso 3: Desplegar el contenido de la carpeta 'build' al bucket
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gsutil'
+    args:
+      - '-m'
+      - 'rsync'
+      - '-c'
+      - '-r'
+      - 'build/.'
+      - 'gs://www.kamdata.com.mx'
