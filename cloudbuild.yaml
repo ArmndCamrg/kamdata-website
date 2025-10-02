@@ -17,3 +17,7 @@ steps:
       - 'hosting'
       - '--project'
       - 'kamdata-sitioweb'
+
+# ---- AÑADE ESTA SECCIÓN PARA SOLUCIONAR EL ERROR ----
+options:
+  logging: CLOUD_LOGGING_ONLY
