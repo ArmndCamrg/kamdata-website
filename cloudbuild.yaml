@@ -17,8 +17,3 @@ steps:
       - '-r'
       - 'build/.'
       - 'gs://www.kamdata.com.mx'
-
-# ---- NUEVA SECCIÓN AL FINAL ----
-options:
-  logging: GCS_ONLY
-  logsBucket: 'gs://kamdata-sitioweb-cloudbuild-logs'
