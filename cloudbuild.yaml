@@ -17,3 +17,7 @@ steps:
       - '-r'
       - 'build/.'
       - 'gs://www.kamdata.com.mx'
+
+# ---- AÑADE ESTA SECCIÓN AL FINAL ----
+options:
+  logging: CLOUD_LOGGING_ONLY
