@@ -1,23 +1,19 @@
 steps:
-  # ... (los pasos 1 y 2 de npm no cambian) ...
+  # Paso 1: Instalar dependencias del proyecto
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
 
+  # Paso 2: Construir la aplicación de React
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'build']
 
-  # Paso 3: Desplegar a Cloud Storage (CON EL AJUSTE)
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'gsutil'
+  # Paso 3: Desplegar a Firebase Hosting
+  - name: 'gcr.io/cloud-builders/npm'
     args:
-      - '-m'
-      - 'rsync'
-      - '-a' # <---- AÑADE ESTA LÍNEA
-      - 'public-read' # <---- Y ESTA LÍNEA
-      - '-c'
-      - '-r'
-      - 'build/.'
-      - 'gs://www.kamdata.com.mx'
-
-options:
-  logging: CLOUD_LOGGING_ONLY
+      - 'npx'
+      - 'firebase-tools'
+      - 'deploy'
+      - '--only'
+      - 'hosting'
+      - '--project'
+      - 'kamdata-sitioweb'
