@@ -1,23 +1,23 @@
 steps:
-  # Paso 1: Instalar las dependencias
+  # ... (los pasos 1 y 2 de npm no cambian) ...
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
 
-  # Paso 2: Construir la aplicación de React
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run', 'build']
 
-  # Paso 3: Desplegar a Cloud Storage
+  # Paso 3: Desplegar a Cloud Storage (CON EL AJUSTE)
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gsutil'
     args:
       - '-m'
       - 'rsync'
+      - '-a' # <---- AÑADE ESTA LÍNEA
+      - 'public-read' # <---- Y ESTA LÍNEA
       - '-c'
       - '-r'
       - 'build/.'
       - 'gs://www.kamdata.com.mx'
 
-# ---- AÑADE ESTA SECCIÓN AL FINAL ----
 options:
   logging: CLOUD_LOGGING_ONLY
