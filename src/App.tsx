@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+// No necesitamos HelmetProvider aquí
 import ToastContainer from './components/Toast';
 import Home from './pages/Home';
 import SobreKamdata from './pages/SobreKamdata';
@@ -17,28 +17,25 @@ import MetodoDance from './pages/MetodoDance';
 
 function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sobre-kamdata" element={<SobreKamdata />} />
-            <Route path="/historias-kamdata" element={<HistoriasKamdataEnDesarrollo />} />
-            <Route path="/servicios" element={<Servicios />} />
-            <Route path="/servicios/conferencias" element={<Conferencias />} />
-            <Route path="/servicios/talleres" element={<Talleres />} />
-            <Route path="/servicios/mentoria-grupal" element={<MentoriaGrupal />} />
-            <Route path="/servicios/mentoria-individual" element={<MentoriaIndividual />} />
-            <Route path="/servicios/nexo-estrategico" element={<NexoEstrategico />} />
-            <Route path="/metodo-dance" element={<MetodoDance />} />
-            <Route path="/blog" element={<BlogEnDesarrollo />} />
-            <Route path="/contacto" element={<Contacto />} />
-            {/* Rutas adicionales se agregarán aquí */}
-          </Routes>
-        </div>
-        <ToastContainer />
-      </Router>
-    </HelmetProvider>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre-kamdata" element={<SobreKamdata />} />
+          <Route path="/historias-kamdata" element={<HistoriasKamdataEnDesarrollo />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/servicios/conferencias" element={<Conferencias />} />
+          <Route path="/servicios/talleres" element={<Talleres />} />
+          <Route path="/servicios/mentoria-grupal" element={<MentoriaGrupal />} />
+          <Route path="/servicios/mentoria-individual" element={<MentoriaIndividual />} />
+          <Route path="/servicios/nexo-estrategico" element={<NexoEstrategico />} />
+          <Route path="/metodo-dance" element={<MetodoDance />} />
+          <Route path="/blog" element={<BlogEnDesarrollo />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </div>
+      <ToastContainer />
+    </Router>
   );
 }
 

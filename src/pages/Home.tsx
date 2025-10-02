@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout/Layout';
 
 const Home: React.FC = () => {
@@ -64,6 +65,21 @@ const Home: React.FC = () => {
 
   return (
     <Layout>
+       {/* 2. AÑADIMOS EL BLOQUE DE SEO AQUÍ */}
+      <Helmet>
+        <title>Kamdata | Consultoría en Gestión y Análisis de Datos en México</title>
+        <meta 
+          name="description" 
+          content="Transformamos datos en decisiones estratégicas. Kamdata ofrece servicios expertos de consultoría, análisis y visualización de datos para potenciar tu negocio." 
+        />
+        <meta property="og:title" content="Kamdata | Gestión y Análisis de Datos" />
+        <meta property="og:description" content="Convertimos tus datos en un hábito estratégico." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.kamdata.com.mx" />
+        {/* <meta property="og:image" content="https://www.kamdata.com.mx/logo-para-compartir.png" /> */}
+      </Helmet>
+      
+      {/* El resto de tu código de la página principal sin cambios... */}
       {/* Hero Section */}
       <section className="gradient-kamdata-soft py-20 relative overflow-hidden">
         {/* Elementos decorativos de fondo */}
