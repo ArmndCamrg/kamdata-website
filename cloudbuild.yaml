@@ -1,16 +1,18 @@
 steps:
-  # Paso 1: Instalar dependencias del proyecto
-  - name: 'gcr.io/cloud-builders/npm'
+  # Paso 1: Instalar dependencias
+  - name: 'node:18'
+    entrypoint: 'npm'
     args: ['install']
 
-  # Paso 2: Construir la aplicación de React
-  - name: 'gcr.io/cloud-builders/npm'
+  # Paso 2: Construir la aplicación
+  - name: 'node:18'
+    entrypoint: 'npm'
     args: ['run', 'build']
 
-  # Paso 3: Desplegar a Firebase Hosting
-  - name: 'gcr.io/cloud-builders/npm'
+  # Paso 3: Desplegar a Firebase
+  - name: 'node:18'
+    entrypoint: 'npx'
     args:
-      - 'npx'
       - 'firebase-tools'
       - 'deploy'
       - '--only'
@@ -18,6 +20,5 @@ steps:
       - '--project'
       - 'kamdata-sitioweb'
 
-# ---- AÑADE ESTA SECCIÓN PARA SOLUCIONAR EL ERROR ----
 options:
   logging: CLOUD_LOGGING_ONLY
