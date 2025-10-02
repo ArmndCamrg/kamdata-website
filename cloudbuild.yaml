@@ -1,15 +1,15 @@
 steps:
-  # Paso 1: Instalar dependencias
+  # Instala las dependencias del proyecto
   - name: 'node:18'
     entrypoint: 'npm'
     args: ['install']
 
-  # Paso 2: Construir la aplicación
+  # Construye la aplicación de React
   - name: 'node:18'
     entrypoint: 'npm'
     args: ['run', 'build']
 
-  # Paso 3: Desplegar a Firebase
+  # Despliega en Firebase Hosting
   - name: 'node:18'
     entrypoint: 'npx'
     args:
@@ -18,7 +18,7 @@ steps:
       - '--only'
       - 'hosting'
       - '--project'
-      - 'kamdata-sitioweb-dd171' # <--- CAMBIO CLAVE
+      - 'kamdata-sitioweb' # <--- Apuntando al proyecto correcto
 
 options:
   logging: CLOUD_LOGGING_ONLY
