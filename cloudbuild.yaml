@@ -1,24 +1,27 @@
 steps:
-  # Paso 1: Instalar dependencias
+  # Paso 1: Obtener el token de despliegue desde Secret Manager
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - "gcloud secrets versions access latest --secret=firebase-deploy-token > /workspace/firebase_token.txt"
+
+  # Paso 2: Instalar dependencias
   - name: 'node:18'
     entrypoint: 'npm'
     args: ['install']
 
-  # Paso 2: Construir la aplicación
+  # Paso 3: Construir la aplicación
   - name: 'node:18'
     entrypoint: 'npm'
     args: ['run', 'build']
 
-  # Paso 3: Desplegar a Firebase
+  # Paso 4: Desplegar a Firebase usando el token
   - name: 'node:18'
-    entrypoint: 'npx'
+    entrypoint: 'bash'
     args:
-      - 'firebase-tools'
-      - 'deploy'
-      - '--only'
-      - 'hosting'
-      - '--project'
-      - 'kamdata-sitioweb'
+      - '-c'
+      - "npx firebase-tools deploy --only hosting --project kamdata-sitioweb --token \"$$(cat /workspace/firebase_token.txt)\""
 
 options:
   logging: CLOUD_LOGGING_ONLY
