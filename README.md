@@ -206,5 +206,5 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 ---
 
 *Desarrollado con ❤️ por E-vior Developments para Kamdata*
-
+ 
 </div>
