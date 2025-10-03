@@ -1,209 +1,72 @@
-# 🧭 Kamdata Website
+# Kamdata - Sitio Web Oficial
 
-<div align="center">
+Este es el repositorio del sitio web de Kamdata, una aplicación web moderna construida con React y desplegada en la infraestructura de Google Cloud y Firebase.
 
-![Kamdata Logo](public/logo-kamdata.png)
+**Sitio en Vivo:** [https://www.kamdata.com.mx](https://www.kamdata.com.mx)
 
-**Convierte la gestión de datos en un hábito estratégico**
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/74433caa-c10d-4143-9a03-e79591b3cb77/deploy-status)](https://app.netlify.com/sites/mxkamdata/deploys)
-[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=flat&logo=react)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.9.0-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
-
-[🌐 Ver Sitio Web](https://mxkamdata.netlify.app) • [📊 Panel Admin](https://app.netlify.com/projects/mxkamdata)
-
-</div>
+[![Cloud Build Status](https://storage.googleapis.com/cloud-build-badges/kamdata-sitioweb/main.svg)](https://console.cloud.google.com/cloud-build/builds;branch="main"?project=kamdata-sitioweb)
 
 ---
 
-## ✨ Sobre Kamdata
+## 🚀 Arquitectura y Stack Tecnológico
 
-**Kamdata** es una empresa de mentoría especializada en convertir datos en decisiones estratégicas. Ayudamos a profesionales y líderes de PyMEs a desarrollar una mentalidad digital práctica y sostenible.
+La arquitectura de este proyecto es 100% **sin servidor (serverless)**, diseñada para un alto rendimiento global, escalabilidad automática y un mantenimiento mínimo.
 
-> *"No navegamos por ti. Te damos la brújula y te enseñamos cómo."*
+### Tecnologías Principales
+* **Frontend**: [React](https://reactjs.org/) con [TypeScript](https://www.typescriptlang.org/)
+* **Estilos**: [Tailwind CSS](https://tailwindcss.com/)
+* **Hosting & CDN**: [Firebase Hosting](https://firebase.google.com/products/hosting)
+* **CI/CD (Pipeline de Despliegue)**: [Google Cloud Build](https://cloud.google.com/build)
+* **DNS**: [Google Cloud DNS](https://cloud.google.com/dns)
+* **Gestión de Secretos**: [Google Secret Manager](https://cloud.google.com/secret-manager)
+* **Control de Versiones**: [GitHub](https://github.com/)
 
----
-
-## 🎯 Características Principales
-
-### 🧭 **Método DANCE**
-Nuestra metodología probada de 5 fases:
-- **D**iagnostica - Evalúa tu situación actual
-- **A**linea - Objetivos y recursos
-- **N**avega - Hacia la solución
-- **C**onstruye - Tu sistema de datos
-- **E**jecuta - Y optimiza continuamente
-
-### 🎨 **Diseño Visual**
-- **Paleta oficial**: Hunyadi Yellow (#E8AC41), Strawberry (#FC4C4E), Cerulean (#0492C2)
-- **Tipografía**: Montserrat (títulos) + Lato (cuerpo)
-- **Responsive**: Optimizado para todos los dispositivos
-- **Accesible**: Cumple estándares de accesibilidad web
-
-### 📱 **Funcionalidades**
-- ✅ Descarga gratuita del PDF del Método DANCE
-- ✅ Formulario de contacto funcional
-- ✅ Navegación fluida entre secciones
-- ✅ SEO optimizado
-- ✅ Animaciones suaves y profesionales
+### Flujo de Despliegue Automatizado (CI/CD)
+El proyecto cuenta con un pipeline de Integración y Entrega Continua:
+1.  **`git push`**: Un desarrollador sube cambios a la rama `main` en GitHub.
+2.  **Activación**: Un activador (Trigger) en Google Cloud Build detecta el cambio.
+3.  **Autenticación**: Cloud Build obtiene un token de despliegue de forma segura desde Secret Manager.
+4.  **Compilación**: Cloud Build ejecuta los siguientes pasos en un entorno limpio:
+    * `npm install`: Instala todas las dependencias.
+    * `npm run build`: Crea la versión de producción optimizada de la aplicación de React en una carpeta `/build`.
+5.  **Despliegue**: Cloud Build usa `firebase-tools` para desplegar el contenido de la carpeta `/build` en Firebase Hosting.
+6.  **En Vivo**: En minutos, los cambios están disponibles globalmente para todos los usuarios a través del CDN de Firebase.
 
 ---
 
-## 🛠️ Stack Tecnológico
+## ⚙️ Desarrollo en Local
 
-<div align="center">
-
-| Frontend | Styling | Build | Deploy |
-|----------|---------|-------|--------|
-| ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white) | ![Tailwind](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | ![Vite](https://img.shields.io/badge/-Create_React_App-09D3AC?style=flat&logo=create-react-app&logoColor=white) | ![Netlify](https://img.shields.io/badge/-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white) |
-| TypeScript | PostCSS | npm | GitHub |
-
-</div>
-
----
-
-## 🚀 Inicio Rápido
+Para ejecutar el proyecto en tu máquina local, sigue estos pasos.
 
 ### Prerrequisitos
-- Node.js 18.18.0 o superior
-- npm o yarn
+* [Node.js](https://nodejs.org/) (versión LTS recomendada)
+* [npm](https://www.npmjs.com/) (se instala con Node.js)
 
-### Instalación
+### Instalación y Ejecución
+1.  **Clona el repositorio**:
+    ```bash
+    git clone [https://github.com/ArmndCamrg/kamdata-website.git](https://github.com/ArmndCamrg/kamdata-website.git)
+    cd kamdata-website
+    ```
 
-```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/kamdata-website.git
+2.  **Instala las dependencias**:
+    ```bash
+    npm install
+    ```
 
-# Navegar al directorio
-cd kamdata-website
-
-# Instalar dependencias
-npm install
-
-# Iniciar servidor de desarrollo
-npm start
-```
-
-### Scripts Disponibles
-
-```bash
-npm start          # Servidor de desarrollo (puerto 3000)
-npm run build      # Build de producción
-npm test           # Ejecutar tests
-npm run eject      # Exponer configuración (no recomendado)
-```
+3.  **Inicia el servidor de desarrollo**:
+    ```bash
+    npm start
+    ```
+    El sitio se abrirá automáticamente en `http://localhost:3000`.
 
 ---
 
-## 📁 Estructura del Proyecto
+##  deployment Despliegue a Producción
 
-```
-kamdata-website/
-├── 📁 public/                 # Archivos públicos
-│   ├── 🖼️ logo-kamdata.png    # Logo principal
-│   ├── 🖼️ kamdata-team.png    # Imagen del equipo
-│   └── 📄 guia-metodo-dance.pdf # PDF descargable
-├── 📁 src/
-│   ├── 📁 components/         # Componentes reutilizables
-│   │   ├── 📁 Layout/         # Header, Footer, Layout
-│   │   └── 🧩 EnDesarrollo.tsx # Componente para páginas en desarrollo
-│   ├── 📁 pages/              # Páginas principales
-│   │   ├── 🏠 Home.tsx        # Página de inicio
-│   │   ├── 💃 MetodoDance.tsx # Metodología DANCE
-│   │   ├── 👥 SobreKamdata.tsx # Sobre nosotros
-│   │   ├── 🛠️ Servicios.tsx   # Servicios ofrecidos
-│   │   └── 📞 Contacto.tsx    # Formulario de contacto
-│   ├── 🎨 index.css          # Estilos globales
-│   └── ⚛️ App.tsx            # Componente principal
-├── ⚙️ tailwind.config.js     # Configuración Tailwind
-├── 🌐 netlify.toml           # Configuración Netlify
-└── 📦 package.json           # Dependencias y scripts
-```
+El despliegue a producción es **completamente automático**.
 
----
-
-## 🎨 Paleta de Colores
-
-<div align="center">
-
-| Color | Hex | Uso | Preview |
-|-------|-----|-----|---------|
-| **Hunyadi Yellow** | `#E8AC41` | CTAs, Claridad | ![#E8AC41](https://via.placeholder.com/20/E8AC41/000000?text=+) |
-| **Strawberry** | `#FC4C4E` | Transformación Digital | ![#FC4C4E](https://via.placeholder.com/20/FC4C4E/000000?text=+) |
-| **Cerulean** | `#0492C2` | Metodología, Confianza | ![#0492C2](https://via.placeholder.com/20/0492C2/000000?text=+) |
-
-</div>
-
----
-
-## 📊 Valores K.A.M.D.A.T.A.
-
-<div align="center">
-
-| Letra | Valor | Icono | Descripción |
-|-------|-------|-------|-------------|
-| **K** | Conocimiento | 📚 | Expertise basado en experiencia real |
-| **A** | Responsabilidad | ✅ | Compromiso con resultados tangibles |
-| **M** | Mentoría | 🌟 | Acompañamiento personalizado |
-| **D** | Dinamismo | ⚡ | Adaptación a necesidades específicas |
-| **A** | Acción | 🎯 | Implementación práctica sobre teoría |
-| **T** | Trayectoria | 🧭 | Experiencia comprobada en el sector |
-| **A** | Actitud | 😊 | Perspectiva positiva y orientada a soluciones |
-
-</div>
-
----
-
-## 🌐 Deployment
-
-El sitio está desplegado automáticamente en **Netlify**:
-
-- **URL Principal**: [https://mxkamdata.netlify.app](https://mxkamdata.netlify.app)
-- **Deploy automático**: Cada push a `main` despliega automáticamente
-- **Preview deploys**: Cada PR genera un preview único
-
-### Configuración Netlify
-
-```toml
-[build]
-publish = "build"
-command = "npm run build"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-```
-
----
-
-## 🤝 Contribuir
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
-
----
-
-## 📞 Contacto
-
-<div align="center">
-
-**Kamdata** - Convierte la gestión de datos en un hábito estratégico
-
-[![Website](https://img.shields.io/badge/Website-mxkamdata.netlify.app-blue?style=flat&logo=netlify)](https://mxkamdata.netlify.app)
-[![Email](https://img.shields.io/badge/Email-contacto@kamdata.mx-red?style=flat&logo=gmail)](mailto:contacto@kamdata.mx)
-
----
+Cualquier cambio que se fusione o se suba a la rama **`main`** activará el pipeline de CI/CD y se publicará en `https://www.kamdata.com.mx` en aproximadamente 2-3 minutos.
 
 *Desarrollado con ❤️ por E-vior Developments para Kamdata *
  
