@@ -77,7 +77,7 @@ const Home: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.kamdata.com.mx" />
         {/*se cambio por el logo horizontal de kamdata*/}
-        <meta property="og:image" content="/assets/icons/kamdata-logo-hor.png" />
+        <meta property="og:image" content="/assets/logos/kamdata-logo-hor.png" />
       </Helmet>
       
       {/* El resto de tu código de la página principal sin cambios... */}
