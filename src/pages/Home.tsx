@@ -67,7 +67,7 @@ const Home: React.FC = () => {
     <Layout>
        {/* 2. AÑADIMOS EL BLOQUE DE SEO AQUÍ */}
       <Helmet>
-        <title>Kamdata | Consultoría en Gestión y Análisis de Datos en México</title>
+        <title>Kamdata | Gestión y Análisis de Datos en México</title>
         <meta 
           name="description" 
           content="Transformamos datos en decisiones estratégicas. Kamdata ofrece servicios expertos de consultoría, análisis y visualización de datos para potenciar tu negocio." 
@@ -76,7 +76,8 @@ const Home: React.FC = () => {
         <meta property="og:description" content="Convertimos tus datos en un hábito estratégico." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.kamdata.com.mx" />
-        {/* <meta property="og:image" content="https://www.kamdata.com.mx/logo-para-compartir.png" /> */}
+        {/*se cambio por el logo horizontal de kamdata*/}
+        <meta property="og:image" content="public/assets/icons/kamdata-logo-hor.png" />
       </Helmet>
       
       {/* El resto de tu código de la página principal sin cambios... */}

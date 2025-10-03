@@ -13,7 +13,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
-  title = 'Kamdata - Convierte la gestión de datos en un hábito estratégico',
+  title = 'kamdata - Convierte la gestión de datos en un hábito estratégico',
   description = 'Te ayudamos a tomar decisiones con claridad y rumbo, sin complicaciones técnicas. Mentoría y formación práctica para convertir datos en decisiones estratégicas.',
   keywords = 'kamdata, datos, mentoría, estrategia, decisiones, método DANCE, transformación digital, PyMEs',
   ogImage = '/og-image-kamdata.jpg'

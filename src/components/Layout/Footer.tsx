@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
             <div className="flex items-center mb-4">
               <img 
                 className="h-8 w-auto brightness-0 invert" 
-                src="/logo-kamdata.png" 
-                alt="Kamdata" 
+                src="/public/assets/icons/kamdata-logo-hor-white.png" // <-- RUTA CORREGIDA
+                alt="Kamdata logo blanco principal horizontal" // <-- Texto 'alt' un poco mas descriptivo 
               />
-              <span className="ml-3 text-xl font-bold font-montserrat">Kamdata</span>
+              {/*<span className="ml-4 text-xl font-bold text-gray-900 font-montserrat">Kamdata</span>*/}
             </div>
             <p className="text-gray-200 mb-4 max-w-md">
               Kamdata es una empresa de mentoría que habilita a profesionales y líderes de PyMEs 

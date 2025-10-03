@@ -34,10 +34,10 @@ const Header: React.FC = () => {
             <Link to="/" className="flex items-center">
               <img 
                 className="logo-kamdata-large" 
-                src="/logo-kamdata.png" 
-                alt="Kamdata" 
+                src="/public/assets/icons/kamdata-logo-hor.png" // <-- RUTA CORREGIDA
+                alt="Kamdata Logo horizontal amarillo principal" // <-- Texto 'alt' un poco mas descriptivo
               />
-              <span className="ml-4 text-xl font-bold text-gray-900 font-montserrat">Kamdata</span>
+              {/*<span className="ml-4 text-xl font-bold text-gray-900 font-montserrat">Kamdata</span>*/}
             </Link>
           </div>
 
