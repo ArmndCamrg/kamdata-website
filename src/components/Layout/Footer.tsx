@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center mb-4">
               <img 
                 className="h-8 w-auto brightness-0 invert" 
-                src="/public/assets/icons/kamdata-logo-hor-white.png" // <-- RUTA CORREGIDA
+                src="/assets/icons/kamdata-logo-hor-white.png" // <-- RUTA CORREGIDA
                 alt="Kamdata logo blanco principal horizontal" // <-- Texto 'alt' un poco mas descriptivo 
               />
               {/*<span className="ml-4 text-xl font-bold text-gray-900 font-montserrat">Kamdata</span>*/}

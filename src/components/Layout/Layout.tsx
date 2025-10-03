@@ -42,7 +42,7 @@ const Layout: React.FC<LayoutProps> = ({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Kamdata",
+            "name": "kamdata",
             "description": "Empresa de mentoría que habilita a profesionales y líderes de PyMEs para convertir sus datos en decisiones claras, sostenibles y estratégicas",
             "url": "https://kamdata.com.mx",
             "logo": "https://kamdata.com.mx/logo-kamdata.png",
