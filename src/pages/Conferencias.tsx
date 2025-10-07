@@ -9,6 +9,31 @@ const Conferencias: React.FC = () => {
       description="Conferencias inspiradoras que transforman la mentalidad hacia los datos. Aprende a convertir información en decisiones estratégicas con el Método DANCE de Kamdata."
       keywords="conferencias kamdata, despierta tu genio digital, transformacion digital, metodo dance, datos estrategicos, conferencias empresariales"
     >
+       {/* INICIA BLOQUE DE SEO 2.0 (DATOS ESTRUCTURADOS) */}
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Servicio de Conferencias sobre Datos",
+              "description": "Descubre nuestros servicios diseñados para convertir datos en decisiones estratégicas: conferencias, talleres interactivos y mentorías personalizadas para profesionales y PyMEs en México.",
+              "provider": {
+                "@type": "Organization",
+                "name": "Kamdata",
+                "url": "https://www.kamdata.com.mx"
+              },
+              "serviceType": "Consultoría y Formación en Gestión de Datos",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Mexico"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+      {/* TERMINA BLOQUE DE SEO 2.0 */}
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-kamdata-primary/10 to-kamdata-accent/10 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

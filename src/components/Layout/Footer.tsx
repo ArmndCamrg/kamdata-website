@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © {new Date().getFullYear()} Kamdata. Todos los derechos reservados.
+            © {new Date().getFullYear()} kamdata. Todos los derechos reservados.
           </p>
         </div>
       </div>

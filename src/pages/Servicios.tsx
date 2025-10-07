@@ -73,6 +73,31 @@ const Servicios: React.FC = () => {
       description="Descubre nuestros servicios de mentoría y formación: conferencias, talleres, mentoría grupal e individual, y nexo estratégico. No navegamos por ti, te damos la brújula."
       keywords="servicios kamdata, mentoria datos, conferencias, talleres, formacion, consultoria datos"
     >
+ {/* INICIA BLOQUE DE SEO 2.0 (DATOS ESTRUCTURADOS) */}
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Servicios de Mentoría y Formación en Datos",
+              "description": "Descubre nuestros servicios diseñados para convertir datos en decisiones estratégicas: conferencias, talleres interactivos y mentorías personalizadas para profesionales y PyMEs en México.",
+              "provider": {
+                "@type": "Organization",
+                "name": "Kamdata",
+                "url": "https://www.kamdata.com.mx"
+              },
+              "serviceType": "Consultoría y Formación en Gestión de Datos",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Mexico"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
+      {/* TERMINA BLOQUE DE SEO 2.0 */}
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-kamdata-primary/10 to-kamdata-accent/10 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

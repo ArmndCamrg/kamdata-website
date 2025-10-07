@@ -10,21 +10,21 @@ const Home: React.FC = () => {
       descripcion: 'Despierta tu Genio Digital',
       detalle: 'Inspira, conecta, transforma.\n\nAquí empieza el viaje.\nActivamos la mentalidad digital, despertamos la curiosidad y sembramos la visión de lo que es posible.',
       link: '/servicios',
-      icono: '🎤'
+      icono: '/assets/icons/servicio-conferencias.png' // <-- RUTA DE LA IMAGEN
     },
     {
       titulo: 'Mentorías',
       descripcion: 'Acompañamiento personalizado',
       detalle: 'Grupal e individual. Flexible, confidencial y profundo.\n\nAquí trazas tu ruta.\nDiagnosticamos tu punto de partida, alineamos tus metas y construimos paso a paso la estrategia para avanzar con propósito.',
       link: '/servicios',
-      icono: '💡'
+      icono: '/assets/icons/servicio-mentorias.png' // <-- RUTA DE LA IMAGEN
     },
     {
       titulo: 'Nexo Estratégico',
       descripcion: 'Potencia tus datos con un servicio distribuido y experto.',
       detalle: 'Aquí despegas con soporte experto.\nDiseñamos las bases con una estructura táctica y estratégica que te acompaña en la gestión de tus datos, mientras tu mantienes el control de las decisiones.\nTransformamos el caos en claridad, conectamos tus procesos clave con datos relevantes.',
       link: '/servicios/nexo-estrategico',
-      icono: '🚀'
+      icono: '/assets/icons/servicio-nexo.png' // <-- RUTA DE LA IMAGEN
     }
   ];
 
@@ -163,7 +163,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              ¿Por qué elegir <span className="text-kamdata-primary">Kamdata</span>?
+              ¿Por qué elegir <span className="text-kamdata-primary">kamdata</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Somos habilitadores estratégicos. Te enseñamos a navegar el mundo de los datos con autonomía y confianza, a través de nuestros servicios de mentoría y nexo estratégico.
@@ -193,9 +193,13 @@ const Home: React.FC = () => {
                 <div className="absolute top-0 right-0 w-20 h-20 bg-kamdata-primary/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
 
                 <div className="relative z-10 text-center">
-                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300 animate-float inline-block" style={{ animationDelay: `${index * 0.1}s` }}>
-                    {servicio.icono}
-                  </div>
+                 <div className="mb-6 h-20 flex items-center justify-center"> {/* Contenedor para tamaño fijo */}
+                  <img 
+                    src={servicio.icono} 
+                    alt={`Icono para ${servicio.titulo}`}
+                    className="h-16 w-16 object-contain group-hover:scale-110 transition-transform duration-300" 
+                  />
+                </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 font-montserrat">{servicio.titulo}</h3>
                   <p className="text-kamdata-primary font-semibold mb-3 text-lg">{servicio.descripcion}</p>
                   <p className="text-gray-600 mb-6 leading-relaxed whitespace-pre-line">{servicio.detalle}</p>
@@ -225,7 +229,7 @@ const Home: React.FC = () => {
             Cada decisión estratégica parte de una buena pregunta.
           </p>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            En Kamdata desarrollamos el Método DANCE®, una metodología práctica y
+            En kamdata desarrollamos el Método DANCE®, una metodología práctica y
             comprobada que ha guiado a decenas de empresarios, profesionistas y líderes de
             equipo a tomar decisiones más claras, alineadas y sostenibles a partir de sus datos.
           </p>
@@ -234,9 +238,13 @@ const Home: React.FC = () => {
           <div className="space-y-6 mb-12 max-w-2xl mx-auto">
             {/* D - Distingue */}
             <div className="flex items-center text-left">
-              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
-                D
-              </div>
+             {/* --- INICIA CAMBIO --- */}
+              <img 
+                src="/assets/icons/dance-d.png" 
+                alt="Icono para Distingue del Método DANCE"
+                className="w-16 h-16 mr-6 flex-shrink-0"
+              />
+              {/* --- TERMINA CAMBIO --- */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Distingue</h3>
                 <p className="text-gray-600">¿Qué necesito resolver realmente?</p>
@@ -245,9 +253,13 @@ const Home: React.FC = () => {
 
             {/* A - Alinea */}
             <div className="flex items-center text-left">
-              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
-                A
-              </div>
+             {/* --- INICIA CAMBIO --- */}
+              <img 
+                src="/assets/icons/dance-a.png" 
+                alt="Icono para Alinea del Método DANCE"
+                className="w-16 h-16 mr-6 flex-shrink-0"
+              />
+              {/* --- TERMINA CAMBIO --- */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Alinea</h3>
                 <p className="text-gray-600">¿Mi información está conectada con mis objetivos?</p>
@@ -256,9 +268,13 @@ const Home: React.FC = () => {
 
             {/* N - Navega */}
             <div className="flex items-center text-left">
-              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
-                N
-              </div>
+              {/* --- INICIA CAMBIO --- */}
+              <img 
+                src="/assets/icons/dance-n.png" 
+                alt="Icono para Navega del Método DANCE"
+                className="w-16 h-16 mr-6 flex-shrink-0"
+              />
+              {/* --- TERMINA CAMBIO --- */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Navega</h3>
                 <p className="text-gray-600">¿Cómo sabré si voy por buen camino?</p>
@@ -267,9 +283,13 @@ const Home: React.FC = () => {
 
             {/* C - Construye */}
             <div className="flex items-center text-left">
-              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
-                C
-              </div>
+              {/* --- INICIA CAMBIO --- */}
+              <img 
+                src="/assets/icons/dance-c.png" 
+                alt="Icono para Construye del Método DANCE"
+                className="w-16 h-16 mr-6 flex-shrink-0"
+              />
+              {/* --- TERMINA CAMBIO --- */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Construye</h3>
                 <p className="text-gray-600">¿Qué soluciones simples puedo implementar?</p>
@@ -278,9 +298,13 @@ const Home: React.FC = () => {
 
             {/* E - Ejecuta */}
             <div className="flex items-center text-left">
-              <div className="w-16 h-16 bg-kamdata-primary rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6 flex-shrink-0">
-                E
-              </div>
+              {/* --- INICIA CAMBIO --- */}
+              <img 
+                src="/assets/icons/dance-e.png" 
+                alt="Icono para Ejecuta del Método DANCE"
+                className="w-16 h-16 mr-6 flex-shrink-0"
+              />
+              {/* --- TERMINA CAMBIO --- */}
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Ejecuta</h3>
                 <p className="text-gray-600">¿Cómo convierto esto en un hábito estratégico?</p>
@@ -357,12 +381,12 @@ const Home: React.FC = () => {
               <div className="text-center">
                 <div className="w-56 h-32 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
                   <img
-                    src="/logos/instituto-innovacion.png"
-                    alt="Instituto de Innovación"
+                    src="/assets/logos/ICEC_GTO_logo.png"
+                    alt="Logo de Instituto de Innovación, aliado de Kamdata"
                     className="w-48 h-24 object-contain"
                     onError={handleImageError}
                   />
-                  <span className="text-6xl hidden">🏢</span>
+                  {/* <span className="text-6xl hidden">🏢</span> Se omite este icono*/}
                 </div>
                 <p className="text-sm text-gray-600 font-medium">Instituto de Innovación</p>
               </div>
@@ -371,12 +395,12 @@ const Home: React.FC = () => {
               <div className="text-center">
                 <div className="w-56 h-32 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
                   <img
-                    src="/logos/casa-emprendimiento.png"
-                    alt="Casa del Emprendimiento"
+                    src="/assets/logos/CE_gto_logo.png"
+                    alt="Logo de Casa del Emprendimiento, aliado de Kamdata"
                     className="w-48 h-24 object-contain"
                     onError={handleImageError}
                   />
-                  <span className="text-6xl hidden">🏠</span>
+                  {/* <span className="text-6xl hidden">🏠</span> Se omite este icono*/} 
                 </div>
                 <p className="text-sm text-gray-600 font-medium">Casa del Emprendimiento</p>
               </div>
@@ -385,12 +409,12 @@ const Home: React.FC = () => {
               <div className="text-center">
                 <div className="w-56 h-32 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
                   <img
-                    src="/logos/treehouse.png"
-                    alt="Treehouse"
+                    src="/assets/logos/TH_logo.png"
+                    alt="Logo de Treehouse, aliado de Kamdata"
                     className="w-48 h-24 object-contain"
                     onError={handleImageError}
                   />
-                  <span className="text-6xl hidden">🌳</span>
+                  {/* <span className="text-6xl hidden">🌳</span> Se omite este icono*/}
                 </div>
                 <p className="text-sm text-gray-600 font-medium">Treehouse</p>
               </div>
@@ -399,12 +423,12 @@ const Home: React.FC = () => {
               <div className="text-center">
                 <div className="w-56 h-32 mx-auto mb-3 bg-gray-100 rounded-lg flex items-center justify-center">
                   <img
-                    src="/logos/e-vior-developments.png"
-                    alt="E-vior Developments"
+                    src="/assets/logos/eviordev_logo.png"//Se agrega el logo correcto
+                    alt="Logo de E-vior Developments, aliado de Kamdata" //Se agrega el alt correcto
                     className="w-48 h-24 object-contain"
                     onError={handleImageError}
                   />
-                  <span className="text-6xl hidden">💻</span>
+                  {/* <span className="text-6xl hidden">💻</span> Se omite este icono*/}
                 </div>
                 <p className="text-sm text-gray-600 font-medium">E-vior Developments</p>
               </div>

@@ -11,50 +11,50 @@ module.exports = {
         'lato': ['Lato', 'sans-serif'],
       },
       colors: {
-        // Paleta de colores oficial de Kamdata
-        'kamdata-primary': '#E8AC41',    // Hunyadi Yellow - Claridad, llamadas a la acción
-        'kamdata-secondary': '#FC4C4E',  // Strawberry - Mentalidad digital, transformación
-        'kamdata-accent': '#0492C2',     // Cerulean - Metodología, estructura, confianza
+        // Paleta de colores oficial de Kamdata (ACTUALIZADA)
+        'kamdata-primary': '#ebac3f',    // <-- CAMBIO
+        'kamdata-secondary': '#ea4e51',  // <-- CAMBIO
+        'kamdata-accent': '#0492c2',     // (Este ya era correcto)
         
-        // Variaciones de los colores principales
+        // Variaciones de los colores principales (ACTUALIZADAS)
         primary: {
           50: '#fef9ec',
           100: '#fdf2d3',
-          200: '#fbe3a6',
+          200: '#fedeae', // <-- CAMBIO (Claro)
           300: '#f8d06e',
           400: '#f4b834',
-          500: '#E8AC41', // Color principal Kamdata
+          500: '#ebac3f', // <-- CAMBIO (Principal)
           600: '#d18b1a',
-          700: '#ae6c17',
+          700: '#a87513', // <-- CAMBIO (Oscuro)
           800: '#8d5419',
           900: '#744518',
         },
         secondary: {
           50: '#fef2f2',
           100: '#fee2e2',
-          200: '#fecaca',
+          200: '#f8c8cf', // <-- CAMBIO (Claro)
           300: '#fca5a5',
           400: '#f87171',
-          500: '#FC4C4E', // Color secundario Kamdata
+          500: '#ea4e51', // <-- CAMBIO (Principal)
           600: '#dc2626',
-          700: '#b91c1c',
+          700: '#9a2026', // <-- CAMBIO (Oscuro)
           800: '#991b1b',
           900: '#7f1d1d',
         },
         accent: {
           50: '#f0f9ff',
           100: '#e0f2fe',
-          200: '#bae6fd',
+          200: '#8fd2ec', // <-- CAMBIO (Claro)
           300: '#7dd3fc',
           400: '#38bdf8',
-          500: '#0492C2', // Color acento Kamdata
+          500: '#0492c2', // (Este ya era correcto)
           600: '#0284c7',
-          700: '#0369a1',
+          700: '#024e85', // <-- CAMBIO (Oscuro)
           800: '#075985',
           900: '#0c4a6e',
         },
         
-        // Colores neutros mejorados
+        // Colores neutros (sin cambios)
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',

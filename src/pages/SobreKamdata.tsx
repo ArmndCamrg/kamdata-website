@@ -56,8 +56,8 @@ const SobreKamdata: React.FC = () => {
       especialidades: ['Método DANCE', 'Estrategia de Datos', 'Mentoría Ejecutiva', 'Transformación Digital']
     },
     {
-      nombre: 'Armando Camargo',
-      rol: 'Director Técnico',
+      nombre: 'Armando Camargo Peña',
+      rol: 'Co-Fundador y CDTO',
       bio: 'Ingeniero especializado en arquitecturas de datos y soluciones tecnológicas. Experto en implementación de sistemas de análisis y automatización para PyMEs.',
       especialidades: ['Arquitectura de Datos', 'Automatización', 'Integración de Sistemas', 'Análisis Técnico']
     }
@@ -66,7 +66,7 @@ const SobreKamdata: React.FC = () => {
   return (
     <Layout
       title="Sobre Kamdata - Quiénes Somos | Kamdata"
-      description="Conoce a Kamdata: empresa de mentoría especializada en convertir datos en decisiones estratégicas. Descubre nuestra misión, visión, valores K.A.M.D.A.T.A. y equipo."
+      description="Conoce a kamdata: empresa de mentoría especializada en convertir datos en decisiones estratégicas. Descubre nuestra misión, visión, valores K.A.M.D.A.T.A. y equipo."
       keywords="sobre kamdata, quienes somos, mision vision, valores kamdata, equipo kamdata, karla martinez, armando camargo"
     >
       {/* Hero Section */}
