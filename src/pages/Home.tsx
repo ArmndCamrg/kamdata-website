@@ -30,28 +30,28 @@ const Home: React.FC = () => {
 
   const testimonios = [
     {
-      nombre: 'María González',
-      rol: 'Directora de Operaciones',
-      empresa: 'Distribuidora del Norte',
+      //nombre: 'María González',
+      //rol: 'Directora de Operaciones',
+      //empresa: 'Distribuidora del Norte',
       testimonio: 'Esta experiencia me ayudó a detectar patrones que me limitan y me dio herramientas para cambiar.',
       servicio: 'Chip Digital Activado',
-      foto: '/testimonials/maria-gonzalez.jpg'
+      //foto: '/testimonials/maria-gonzalez.jpg'
     },
     {
-      nombre: 'Carlos Mendoza',
-      rol: 'CEO',
-      empresa: 'TechStart Solutions',
+      //nombre: 'Carlos Mendoza',
+      //rol: 'CEO',
+      //empresa: 'TechStart Solutions',
       testimonio: 'Este taller me ayudó a darme cuenta de que necesito claridad y una estrategia digital para avanzar con propósito.',
       servicio: 'Despierta tu Genio Digital',
-      foto: '/testimonials/carlos-mendoza.jpg'
+      //foto: '/testimonials/carlos-mendoza.jpg'
     },
     {
-      nombre: 'Ana Rodríguez',
-      rol: 'Gerente de Marketing',
-      empresa: 'Boutique Elegance',
+      //nombre: 'Ana Rodríguez',
+      //rol: 'Gerente de Marketing',
+      //empresa: 'Boutique Elegance',
       testimonio: 'Más allá del contenido, destaco el acompañamiento personalizado, las herramientas concretas que pude aplicar desde la primera sesión y la claridad para alinear mis retos con soluciones prácticas.',
       servicio: 'Mentoría Individual',
-      foto: '/testimonials/ana-rodriguez.jpg'
+      //foto: '/testimonials/ana-rodriguez.jpg'
     }
   ];
 
@@ -305,12 +305,13 @@ const Home: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">HISTORIAS KAMDATA</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Historias kamdata</h2>
             <p className="text-lg text-gray-600">Resultados reales de empresas y profesionales que han transformado su mentalidad digital y la forma de trabajar con datos.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonios.map((testimonio, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                {/* ESTE BLOQUE ES EL QUE VAMOS A OMITIR EL NOMBRE, ROL Y EMPRESA
                 <div className="flex items-center mb-4">
                   <img
                     src={testimonio.foto}
@@ -323,6 +324,7 @@ const Home: React.FC = () => {
                     <p className="text-sm text-gray-600">{testimonio.empresa}</p>
                   </div>
                 </div>
+                FIN DEL BLOQUE A OMITIR */}
                 <blockquote className="text-gray-700 italic mb-4 flex-grow">
                   "{testimonio.testimonio}"
                 </blockquote>
