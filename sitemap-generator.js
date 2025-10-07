@@ -1,7 +1,7 @@
 const sitemapBuilder = require('react-router-sitemap-generator');
 const path = require('path');
 
-// La URL base de tu sitio
+// La URL base de tu sitio web
 const hostname = 'https://www.kamdata.com.mx';
 
 // Rutas de tu aplicación
