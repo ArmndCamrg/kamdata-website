@@ -1,4 +1,4 @@
-const { sitemapBuilder } = require('react-router-sitemap-generator');
+const sitemapBuilder = require('react-router-sitemap-generator');
 const path = require('path');
 
 // La URL base de tu sitio
