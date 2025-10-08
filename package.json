@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "node ./sitemap-generator.js"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +51,6 @@
     ]
   },
   "devDependencies": {
-    "react-router-sitemap-generator": "^0.0.8"
+    "sitemap": "^8.0.0"
   }
 }
