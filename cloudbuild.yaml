@@ -1,4 +1,12 @@
 steps:
+  # ---- PASO NUEVO: LIMPIAR CACHÉ Y MÓDULOS ----
+  - name: 'node:18'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'rm -rf node_modules && npm cache clean --force'
+  # ---- FIN PASO NUEVO ----
+  
   # Instala las dependencias del proyecto
   - name: 'node:18'
     entrypoint: 'npm'
